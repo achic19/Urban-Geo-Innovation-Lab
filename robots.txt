@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://achic19.github.io/Urban-Geo-Innovation-Lab/sitemap.xml

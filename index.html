@@ -3,20 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Urban Geo-Innovation Lab | Dr. Achituv Cohen</title>
-  <meta name="description" content="Urban Geo-Innovation Lab at Ariel University. Research in GeoAI, urban mobility, active transportation, accessibility, and spatial equity." />
-  <meta name="keywords" content="GeoAI, GIS, urban mobility, accessibility, walkability, active transportation, spatial equity, Ariel University" />
+  <title>Urban Geo-Innovation Lab | Dr. Achituv Cohen, Ariel University</title>
+  <meta name="description" content="Urban Geo-Innovation Lab at Ariel University, directed by Dr. Achituv Cohen. Research in GeoAI, urban mobility, active transportation, accessibility, and spatial equity." />
+  <meta name="keywords" content="GeoAI, GIS, urban mobility, accessibility, walkability, active transportation, spatial equity, Ariel University, Achituv Cohen" />
   <meta name="author" content="Dr. Achituv Cohen" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="container nav">
       <div class="brand">
-        <h1>Urban Geo-Innovation Lab</h1>
-        <p>GeoAI • Urban Mobility • Spatial Equity</p>
+        <img src="assets/logo.png" alt="Urban Geo-Innovation Lab logo" onerror="this.style.display='none'" />
+        <div class="brand-text">
+          <h1>Urban Geo-Innovation Lab</h1>
+          <p>GeoAI • Urban Mobility • Spatial Equity</p>
+        </div>
       </div>
-      <nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
@@ -27,7 +36,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="container hero-grid">
         <div>
@@ -43,22 +52,22 @@
           </div>
         </div>
 
-        <div class="hero-cards">
-          <div class="card small-card">
-            <h3>Core Focus</h3>
-            <p>GeoAI for Urban Systems</p>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <strong>278+</strong>
+            <span>Citations (Google Scholar)</span>
           </div>
-          <div class="card small-card">
-            <h3>Applied Domain</h3>
-            <p>Mobility & Accessibility</p>
+          <div class="stat-card">
+            <strong>9</strong>
+            <span>h-index</span>
           </div>
-          <div class="card small-card">
-            <h3>Data Sources</h3>
-            <p>OSM, LiDAR, Sensors</p>
+          <div class="stat-card">
+            <strong>5</strong>
+            <span>PhD & graduate researchers</span>
           </div>
-          <div class="card small-card">
-            <h3>Mission</h3>
-            <p>Inclusive & Sustainable Cities</p>
+          <div class="stat-card">
+            <strong>4</strong>
+            <span>Countries studied: Israel, Ethiopia, Ghana, India</span>
           </div>
         </div>
       </div>
@@ -66,14 +75,14 @@
 
     <section id="about" class="section">
       <div class="container two-col">
-        <div>
+        <div class="section-head">
           <p class="section-label">About the Lab</p>
           <h2>Research for more accessible and data-informed urban futures</h2>
         </div>
         <div class="card">
           <p>
             The Urban Geo-Innovation Lab explores how geospatial data science and artificial intelligence can improve the way cities are planned, measured, and understood.
-            We work at the intersection of GIScience, urban mobility, pedestrian environments, and spatial equity, with a particular interest in vulnerable populations and real-world decision support.
+            Led by Dr. Achituv Cohen in the Department of Civil Engineering at Ariel University, the lab works at the intersection of GIScience, urban mobility, pedestrian environments, and spatial equity &mdash; with current projects spanning inclusive routing, wheelchair and pedestrian accessibility, transport exclusion, urban digital twins, and heat exposure, in study sites across Israel, Ethiopia, Ghana, and India.
           </p>
         </div>
       </div>
@@ -81,8 +90,10 @@
 
     <section id="research" class="section">
       <div class="container">
-        <p class="section-label">Research Themes</p>
-        <h2>Core directions of the lab</h2>
+        <div class="section-head">
+          <p class="section-label">Research Themes</p>
+          <h2>Core directions of the lab</h2>
+        </div>
         <div class="grid four">
           <div class="card">
             <h3>GeoAI & Spatial Machine Learning</h3>
@@ -105,32 +116,47 @@
     </section>
 
     <section id="projects" class="section">
-      <div class="container grid two">
-        <div class="card">
+      <div class="container">
+        <div class="section-head">
           <p class="section-label">Projects</p>
-          <h2>Selected work</h2>
-          <ul class="clean-list">
-            <li>Pedestrian accessibility modelling for vulnerable populations</li>
-            <li>GeoAI methods for walkability and street-level urban analysis</li>
-            <li>Human navigation and route-choice research in urban environments</li>
-            <li>Multimodal geospatial data integration for sustainable transportation</li>
-          </ul>
+          <h2>Current PhD research</h2>
         </div>
-        <div class="card">
-          <p class="section-label">Why it matters</p>
-          <p>
-            Our research aims to move from descriptive mapping toward decision-support systems that can help governments, planners,
-            and researchers design urban environments that are safer, fairer, and more supportive of active transportation.
-          </p>
-          <div class="grid two stat-grid">
-            <div class="stat">
-              <strong>GIS + AI</strong>
-              <span>Integrated analytical workflows</span>
-            </div>
-            <div class="stat">
-              <strong>Human-Centered</strong>
-              <span>Accessibility and inclusion focus</span>
-            </div>
+        <div class="grid two">
+          <div class="card project-card">
+            <span class="project-people">Atakilti Brhanu</span>
+            <h3>Transferable, explainable GeoAI for cross-city pedestrian mobility</h3>
+            <p>A cross-city framework for predicting and forecasting pedestrian activity from a harmonised geodatabase of roughly 4.6 million hourly pedestrian records, built to generalise across heterogeneous urban environments and explain its own predictions.</p>
+            <span class="project-status">PhD in progress</span>
+          </div>
+          <div class="card project-card">
+            <span class="project-people">Teklebrhan Mezgebo</span>
+            <h3>Wheelchair accessibility in developing cities</h3>
+            <p>Standards-driven geospatial modelling of wheelchair mobility in Addis Ababa, combining field data, OpenStreetMap, DEM, and satellite imagery with a GIS-based AHP&ndash;MCDA model and CNN-extracted sidewalk widths to build a wheelchair accessibility index.</p>
+            <span class="project-status">PhD in progress</span>
+          </div>
+          <div class="card project-card">
+            <span class="project-people">Desmond Kemeh</span>
+            <h3>Transport exclusion and road underdevelopment</h3>
+            <p>A multi-sensor machine learning and mixed-methods study of how persistent road underdevelopment drives transport-related social exclusion in Greater Accra, Ghana, with comparative analysis across Maputo, Addis Ababa, and Tel Aviv.</p>
+            <span class="project-status">PhD in progress</span>
+          </div>
+          <div class="card project-card">
+            <span class="project-people">Stasis Mukwenya</span>
+            <h3>Urban Digital Twins as a shared language for city AI</h3>
+            <p>A formal ontology-based architecture for cognitive Urban Digital Twins, using learned embeddings and cross-domain attention to let energy, climate, mobility, and urban-form models enrich one another, validated on Melbourne with a Tel Aviv pilot underway.</p>
+            <span class="project-status">PhD in progress</span>
+          </div>
+          <div class="card project-card">
+            <span class="project-people">Stasis Mukwenya, with Trisalyn Nelson (UC Santa Barbara)</span>
+            <h3>Topology-preserving simplification of OpenStreetMap street networks</h3>
+            <p>SOD, a deterministic pipeline that turns OpenStreetMap's carriageway-level geometry into a clean, single-edge-per-street network while preserving names, classifications, and connectivity &mdash; evaluated on Turin, Tel Aviv, and San Francisco.</p>
+            <span class="project-status">Under review, IJGIS</span>
+          </div>
+          <div class="card project-card">
+            <span class="project-people">Pritipadmaja, with IIT Roorkee</span>
+            <h3>Mapping urban heat stress and walkable access to green space</h3>
+            <p>A composite Heat Affected Index built from two decades of MODIS land-surface-temperature data to map persistent and emerging heat-vulnerable regions across India, alongside work on walkable accessibility and exposure to urban green space.</p>
+            <span class="project-status">Manuscript in preparation</span>
           </div>
         </div>
       </div>
@@ -138,26 +164,61 @@
 
     <section id="team" class="section">
       <div class="container">
-        <p class="section-label">Team</p>
-        <h2>People behind the lab</h2>
-        <div class="grid three">
-          <div class="card">
-            <div class="avatar">AC</div>
+        <div class="section-head">
+          <p class="section-label">Team</p>
+          <h2>People behind the lab</h2>
+        </div>
+
+        <div class="card director-card">
+          <div class="avatar">AC</div>
+          <div>
             <h3>Dr. Achituv Cohen</h3>
-            <p class="role">Lab Director</p>
-            <p>Faculty member in the Department of Civil Engineering at Ariel University. Research interests include GeoAI, geospatial data science, urban mobility, active transportation, and spatial equity.</p>
+            <p class="role">Lab Director &middot; Department of Civil Engineering, Ariel University</p>
+            <p>
+              Achituv's research applies GeoAI and geospatial data science to urban mobility, active transportation, and accessibility &mdash;
+              including inclusive route planning for blind and wheelchair users, pedestrian traffic prediction, and street-network analysis. His work has been cited 278+ times (h-index 9, i10-index 8).
+            </p>
+            <div class="link-row">
+              <a href="https://scholar.google.com/citations?user=fFkBSrIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+              <a href="https://orcid.org/0000-0002-1357-8296" target="_blank" rel="noopener">ORCID</a>
+              <a href="https://www.linkedin.com/in/achituv-cohen/" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://github.com/achic19" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://pniot.ariel.ac.il/projects/trp/GeneralInformation.asp?numRec=883&amp;id_lang=2" target="_blank" rel="noopener">Ariel University Profile</a>
+            </div>
           </div>
-          <div class="card">
-            <div class="avatar">GS</div>
-            <h3>PhD & MSc Students</h3>
-            <p class="role">Graduate Researchers</p>
-            <p>Students working on accessibility, walkability, navigation, urban sensing, street networks, and spatial machine learning.</p>
+        </div>
+
+        <div class="grid three" style="margin-top: 20px;">
+          <div class="card student-card">
+            <div class="avatar small">AB</div>
+            <h3>Atakilti Brhanu</h3>
+            <p class="role">PhD Candidate</p>
+            <p class="topic">Transferable GeoAI for cross-city pedestrian level-of-service mapping and forecasting.</p>
           </div>
-          <div class="card">
-            <div class="avatar">IC</div>
-            <h3>International Collaborators</h3>
-            <p class="role">Research Partners</p>
-            <p>Collaborative work with researchers across geospatial science, urban studies, transportation, accessibility, and GeoAI.</p>
+          <div class="card student-card">
+            <div class="avatar small">TM</div>
+            <h3>Teklebrhan Mezgebo</h3>
+            <p class="role">PhD Candidate</p>
+            <p class="topic">Spatial accessibility for wheelchair users in Addis Ababa, Ethiopia.</p>
+          </div>
+          <div class="card student-card">
+            <div class="avatar small">DK</div>
+            <h3>Desmond Kemeh</h3>
+            <p class="role">PhD Candidate</p>
+            <p class="topic">Transport exclusion among vulnerable communities in Greater Accra, Ghana.</p>
+          </div>
+          <div class="card student-card">
+            <div class="avatar small">SM</div>
+            <h3>Stasis Mukwenya</h3>
+            <p class="role">PhD Candidate</p>
+            <p class="topic">AI-driven Urban Digital Twins and ontology-based city intelligence.</p>
+          </div>
+          <div class="card student-card">
+            <div class="avatar small">P</div>
+            <h3>Pritipadmaja</h3>
+            <p class="role">Research Collaborator</p>
+            <p class="topic">Walkable accessibility and urban heat exposure across India.</p>
+            <span class="affil">Indian Institute of Technology Roorkee</span>
           </div>
         </div>
       </div>
@@ -166,13 +227,68 @@
     <section id="publications" class="section">
       <div class="container">
         <div class="card">
-          <p class="section-label">Publications</p>
-          <h2>Research outputs</h2>
-          <div class="grid three">
-            <div class="subcard">Recent journal articles in GeoAI, urban mobility, and accessibility analysis</div>
-            <div class="subcard">Conference papers on walkability, street networks, and spatial modelling</div>
-            <div class="subcard">Ongoing work on pedestrian environments, navigation, and urban data science</div>
+          <div class="section-head" style="margin-bottom: 8px;">
+            <p class="section-label">Publications</p>
+            <h2>Selected research outputs</h2>
           </div>
+          <p style="color: var(--ink-soft); margin-top: 0;">278+ citations &middot; h-index 9 &middot; i10-index 8. Full list on <a href="https://scholar.google.com/citations?user=fFkBSrIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+
+          <ul class="pub-list">
+            <li>
+              <div>
+                <span class="pub-title">Route planning for blind pedestrians using OpenStreetMap</span>
+                <span class="pub-meta">2021</span>
+              </div>
+              <span class="pub-cite">58 citations</span>
+            </li>
+            <li>
+              <div>
+                <span class="pub-title">Impact of COVID-19 policies on pedestrian traffic and walking patterns</span>
+                <span class="pub-meta">2023</span>
+              </div>
+              <span class="pub-cite">41 citations</span>
+            </li>
+            <li>
+              <div>
+                <span class="pub-title">Evaluating the relationship between walking and street characteristics based on big data and machine learning analysis</span>
+                <span class="pub-meta">2024</span>
+              </div>
+              <span class="pub-cite">40 citations</span>
+            </li>
+            <li>
+              <div>
+                <span class="pub-title">Machine-learning prediction models for pedestrian traffic flow levels</span>
+                <span class="pub-meta">2020</span>
+              </div>
+              <span class="pub-cite">34 citations</span>
+            </li>
+            <li>
+              <div>
+                <span class="pub-title">Urban planning and design with points of interest and visual perception</span>
+                <span class="pub-meta">2024</span>
+              </div>
+              <span class="pub-cite">18 citations</span>
+            </li>
+            <li>
+              <div>
+                <span class="pub-title">Estimating pedestrian traffic with Bluetooth sensor technology</span>
+                <span class="pub-meta">2024</span>
+              </div>
+              <span class="pub-cite">15 citations</span>
+            </li>
+            <li>
+              <div>
+                <span class="pub-title">A topology-preserving approach to simplifying OpenStreetMap street networks<span class="pub-badge">New</span></span>
+                <span class="pub-meta">Mukwenya, Nelson &amp; Cohen &middot; under review, IJGIS</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span class="pub-title">A multidimensional thermal remote-sensing index for assessing surface heat stress across India<span class="pub-badge">New</span></span>
+                <span class="pub-meta">Pritipadmaja, Sharma, Cohen &amp; Garg &middot; in preparation</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -187,14 +303,20 @@
             urban accessibility, mobility analytics, spatial modelling, and geospatial innovation.
           </p>
         </div>
-        <div id="contact" class="card">
+        <div id="contact" class="card contact-list">
           <p class="section-label">Contact</p>
           <h2>Get in touch</h2>
           <p><strong>Director:</strong> Dr. Achituv Cohen</p>
           <p><strong>Institution:</strong> Ariel University</p>
           <p><strong>Department:</strong> Civil Engineering</p>
           <p><strong>Location:</strong> Ariel, Israel</p>
-          <p><strong>Email:</strong> your-email@ariel.ac.il</p>
+          <p><strong>Email:</strong> <a href="mailto:achituv@ariel.ac.il">achituv@ariel.ac.il</a></p>
+          <div class="link-row">
+            <a href="https://scholar.google.com/citations?user=fFkBSrIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://orcid.org/0000-0002-1357-8296" target="_blank" rel="noopener">ORCID</a>
+            <a href="https://www.linkedin.com/in/achituv-cohen/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/achic19" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
       </div>
     </section>
@@ -202,9 +324,28 @@
 
   <footer class="site-footer">
     <div class="container footer-flex">
-      <p>© 2026 Urban Geo-Innovation Lab</p>
-      <p>Built for research, collaboration, and impact.</p>
+      <p>&copy; 2026 Urban Geo-Innovation Lab, Ariel University</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=fFkBSrIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://github.com/achic19" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/achituv-cohen/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </footer>
+
+  <script>
+    var navToggle = document.getElementById('navToggle');
+    var mainNav = document.getElementById('mainNav');
+    navToggle.addEventListener('click', function () {
+      var open = mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>
